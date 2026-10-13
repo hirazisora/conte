@@ -23,14 +23,12 @@
     <h2 id="help-title">使い方</h2>
     <p>AIエージェントと、コンテを元に動画を共作する事を想定したツールです。</p>
     <h3>AIに.conte（コンテファイル）を作成させる</h3>
-    <ol id="agent-conte-steps"><li>下の.conteサンプルをダウンロードし、AIに添付する。</li><li>「添付サンプルの構造を参考に.conte形式でコンテを作成してください」と依頼する。</li></ol>
+    <ol id="agent-conte-steps"><li>下の.conteサンプルをダウンロードする。</li><li>.conteサンプルを動画制作に対応したAIエージェントへ添付し、サンプルの構造を参考に.conte形式でコンテを作成するよう指示する</li></ol>
     <a class="button help-sample" href="./samples/demo.conte" download>.conteサンプル ↓</a>
     <h3>「.conteを開く」で作成されたコンテをチェック</h3>
     <p>場面ごとの画像に指摘コメントを入れたり、脚本を直接修正できます。</p>
     <h3>作成したコンテを元にAIに動画を作成させる</h3>
-    <p>修正を「.conteを保存」で保存し、動画制作に対応したAIへ編集済み.conteと必要な画像・音声などの素材を添付します。</p>
-    <p>利用するAIが.conteの読込や動画出力に対応するか確認してください。素材、尺、画角、解像度、形式、音声・字幕の有無を指定します。</p>
-    <blockquote>添付の編集済み.conteを制作の基準に、場面順・脚本・指摘コメントを反映した動画を作成してください。素材は添付ファイルを使い、30秒・16:9・1920×1080・MP4、日本語ナレーション・字幕ありで出力してください。未提供の素材や対応できない工程は、推測せず着手前に確認してください。</blockquote>
+    <ol><li>「.conteを保存」でコンテファイルを保存する。</li><li>保存したコンテファイルを動画制作に対応したAIエージェントへ添付し、コンテに従い動画を作成するよう指示する</li></ol>
     <div class="dialog-actions"><button id="close-help" class="primary">閉じる</button></div>
   </dialog>
   <dialog id="error-dialog" role="alertdialog" aria-labelledby="error-title" aria-describedby="error-message"><form method="dialog"><h2 id="error-title">エラー</h2><p id="error-message"></p><div class="dialog-actions"><button id="close-error" value="close" class="primary" autofocus>閉じる</button></div></form></dialog>
