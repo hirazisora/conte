@@ -62,3 +62,33 @@ select{font:inherit;border:1px solid var(--border);border-radius:7px;background:
 .scene-controls{display:flex;justify-content:flex-start;gap:4px;margin-top:8px}.scene-controls button{padding:4px 7px;font-size:12px;min-height:28px}
 .scene-heading>input{background:#fff;border:1px solid var(--border);border-radius:7px;padding:10px 12px;font-size:20px;font-weight:600}
 @media(max-width:760px){.scene-item{flex-basis:144px}.scene-heading>input{width:100%;min-width:0;font-size:18px}}
+
+/* Compact scene strip: label sits beside the list; titles are edited on each card. */
+.scene-toolbar{padding-top:12px}
+.scene-strip{display:flex;align-items:center;gap:14px}.scene-strip .section-top{margin:0;flex-shrink:0}
+#scene-list{flex:1;min-width:0;padding:3px 3px 8px}
+.scene-item{flex-basis:150px;padding:5px}
+.scene-thumbnail{height:58px}.thumbnail-description{-webkit-line-clamp:2;padding:5px 7px;line-height:1.5}
+.scene-title-input{display:block;margin-top:5px;padding:3px 6px;font-size:12px;border-color:transparent;background:transparent;border-radius:5px;text-overflow:ellipsis}
+.scene-title-input:hover{border-color:var(--border);background:#fff}.scene-title-input:focus{border-color:var(--border);background:#fff}
+.scene-controls{margin-top:4px}.scene-controls button{padding:1px 6px;min-height:22px;font-size:11px}
+.workspace-divider{margin-bottom:18px}
+/* Narrower comment column, larger central image. */
+.review-panels{grid-template-columns:minmax(200px,.62fr) minmax(0,1.95fr) minmax(0,1fr)}
+@media(max-width:760px){.scene-strip{flex-direction:column;align-items:stretch;gap:6px}.scene-item{flex-basis:140px}}
+
+/* Fit the whole app in the viewport height: only the side lists scroll, the image scales to fit. */
+@media(min-width:761px){
+html,body{height:100%}body{height:100dvh;overflow:hidden}
+.topbar{padding-top:12px;padding-bottom:12px;flex-shrink:0}
+.workspace{flex:1 1 0;min-height:0;overflow:auto;padding-bottom:16px}
+.scene-toolbar,.workspace-divider,#empty-project{flex-shrink:0}
+.review-panels{flex:1 1 0;min-height:320px;grid-template-rows:minmax(0,1fr)}
+.visual-panel{display:flex;flex-direction:column;align-self:stretch;min-height:0}
+.visual-panel>.section-top,.visual-panel>.hint,.image-footer,.visual-panel>.field-label{flex-shrink:0}
+.visual-panel>.hint{margin-bottom:8px}.section-top{margin-bottom:8px}.comments-panel>.hint{margin-bottom:8px}
+#drop-zone{flex:1 1 0;min-height:140px;container-type:size}
+#image-stage{width:min(100cqw,calc(100cqh * var(--image-ratio,1.7778)));max-width:100%}
+.image-footer{min-height:30px}.visual-panel>.field-label{margin:4px 0 6px}
+#description{flex-shrink:0;min-height:64px;height:84px;max-height:40%}
+}

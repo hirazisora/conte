@@ -2,11 +2,10 @@
 <html lang="ja">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Conte</title><link rel="icon" href="./src/conte-icon.svg?v=1.5.1" type="image/svg+xml" sizes="any"><link rel="stylesheet" href="./src/style.css"></head>
 <body>
-  <header class="topbar"><a class="brand" href="./" aria-label="Conte"><img src="./src/conte-icon.svg?v=1.5.1" width="28" height="28" alt=""><span>Conte</span></a><button id="show-help">使い方</button><div class="project-name"><label class="sr-only" for="project-title">コンテ名</label><input id="project-title" value="" aria-label="コンテ名"></div><div class="file-controls"><div class="file-actions"><button id="undo" hidden>取り消す</button><button id="new-project">新規コンテ</button><button id="open-conte">.conteを開く</button><button id="save-conte" class="primary">.conteを保存 ↓</button></div></div></header>
+  <header class="topbar"><a class="brand" href="./" aria-label="Conte"><img src="./src/conte-icon.svg?v=1.5.1" width="28" height="28" alt=""><span>Conte</span></a><div class="project-name"><label class="sr-only" for="project-title">コンテ名</label><input id="project-title" value="" aria-label="コンテ名"></div><div class="file-controls"><div class="file-actions"><button id="show-help">使い方</button><button id="new-project">新規コンテ</button><button id="open-conte">.conteを開く</button><button id="save-conte" class="primary">.conteを保存 ↓</button></div></div></header>
   <main class="workspace">
     <div class="scene-toolbar"><section class="scene-strip" aria-label="場面の選択"><div class="section-top"><h2>場面</h2></div><nav id="scene-list" aria-label="場面一覧"></nav></section></div>
     <div class="workspace-divider" aria-hidden="true"></div>
-    <div class="scene-heading"><label class="sr-only" for="scene-title">場面名</label><input id="scene-title" aria-label="場面名"></div>
     <p id="empty-project" class="empty-note" hidden>場面一覧の「＋」で、最初の場面を追加してください。</p>
     <div class="review-panels">
     <aside class="comments-panel"><div class="section-top"><h2 id="comments-heading">場面画像へのコメント</h2></div><p id="comment-hint" class="hint">画像上で範囲指定→コメントを書く</p><div id="comments" tabindex="0" role="region" aria-labelledby="comments-heading"></div></aside>
